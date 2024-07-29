@@ -25,8 +25,7 @@ app.use(express.json());
 //ab hamey sbhi routes ko mount karna hai 
 
 //mongodb connect
-
-mongoose.connect("mongodb+srv://priyanshuranakoti2222:priyanshu123@cluster0.610run4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+// mongoose.connect("mongodb+srv://priyanshuranakoti2222:priyanshu123@cluster0.610run4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 //mount the todo api routes
 app.use("/api/v1",todoRoutes);
 
@@ -37,8 +36,8 @@ app.listen(PORT, () => {
     
 
 //CONNECT the db
-// const dbConnect=require("./config/database");
-// dbConnect();
+const dbConnect=require("./config/database");
+dbConnect();
 
 
 //default routes
